@@ -1,6 +1,4 @@
 
-//kraya@uabc.edu.mx
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -15,8 +13,6 @@ void display_complejo( complejo_t );
 void setcomplex_t( complejo_t *a , float real, float img );
 void raices_fg(float a, float b, float c, complejo_t *raiz1, complejo_t *raiz2);
 
-
-
 int main()
 {
     float a,b,c;
@@ -29,23 +25,21 @@ int main()
     return 0;
 }
 
-void setcomplex_t( complejo_t *a, float real, float img)
+void setcomplex_t( complejo_t *a, /* cambiar valores de un compjeho */
+                   float real,
+                   float img)
 {
     a->real = real;
     a->complex = img;
 }
 
-void display_complejo(complejo_t a)
+void display_complejo(complejo_t a) /* mostrar el dato */
 {
     printf("(x - (%.2f + %.2fi))\n",a.real,a.complex);
 }
 
-float equation(float a, float b, float c, float x)
-{
-    return a*x*x + b*x + c;
-}
-
-void raices_fg(float a, float b, float c, complejo_t *raiz1, complejo_t *raiz2)
+void raices_fg(float a, float b, float c, /* calcula la formula general */
+               complejo_t *raiz1, complejo_t *raiz2)
 {
     complejo_t
         numerador = {0};
