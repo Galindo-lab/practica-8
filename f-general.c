@@ -8,7 +8,6 @@ typedef struct complejo_t {
     float complex;
 } complejo_t;
 
-float equation( float, float, float, float );
 void display_complejo( complejo_t );
 void setcomplex_t( complejo_t *a , float real, float img );
 void raices_fg(float a, float b, float c, complejo_t *raiz1, complejo_t *raiz2);
